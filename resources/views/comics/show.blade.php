@@ -10,24 +10,54 @@
 <div class="card">
     <div class="card-body">
         <ul>
-            <li>
+            <li class="list-group-item">
                 Serie: {{ $comic->series }}
             </li>
-            <li>
+            <li class="list-group-item">
                 Tipo: {{ $comic->type }}
             </li>
-            <li>
+            <li class="list-group-item">
                 Prezzo: {{ $comic->price }} $
             </li>
-            <li>
+            <li class="list-group-item">
                 Data di publicazione: {{ $comic->sale_date }}
             </li>
-            <li>
-                Artisti: {{ $comic->artists }}
+
+            <li class="list-group-item">
+
+
+                    Artisti:
+
+
+                <ul>
+                    @foreach (explode(',', $comic->artists) as $artist)
+                        <li class="list-group-item">
+                            {{ $artist }}
+                        </li>
+                    @endforeach
+
+                </ul>
+
             </li>
-            <li>
-                Scrittori: {{ $comic->writers }}
-            </li>
+
+
+            <li class="list-group-item">
+
+
+                Scrittori:
+
+
+            <ul>
+                @foreach (explode(',', $comic->writers) as $writer)
+                    <li class="list-group-item">
+                        {{ $writer }}
+                    </li>
+                @endforeach
+
+            </ul>
+
+        </li>
+
         </ul>
 
         <p>
