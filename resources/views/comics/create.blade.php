@@ -36,10 +36,14 @@
     <div class="mb-3">
         <label for="artists" class="form-label">Artisti <span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="artists" name="artists" required maxlength="255" placeholder="Inserisci gli artisti...">
+        <div id="textHelp" class="form-text">* Inserire i nomi separati da virgola</div>
+
     </div>
     <div class="mb-3">
         <label for="writers" class="form-label">Scrittori <span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="writers" name="writers" required maxlength="255" placeholder="Inserisci gli scrittori...">
+        <div id="textHelp" class="form-text">* Inserire i nomi separati da virgola</div>
+
     </div>
 
     <div class="mb-3">
